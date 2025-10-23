@@ -1,136 +1,227 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="vi" class="scrollbar-custom">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>TÂY DU KÝ - Sứ mệnh</title>
-    <link rel="stylesheet" href="css/output.css" />
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/format-about.css" />
+    <link rel="stylesheet" href="../css/output.css" />
   </head>
-  <body>
-    <header class="site-header">
+  <body class="min-h-screen flex flex-col scrollbar-custom">
+    <!-- Header -->
+    <header class="header">
       <div class="container">
-        <a class="brand" href="index.html">
-          <img src="assets/images/logo.png" alt="GA01 Logo" />
-          <span>TÂY DU KÝ</span>
-        </a>
-        <nav class="nav" aria-label="Primary">
-          <button
-            id="menuToggle"
-            class="menu-toggle"
-            aria-expanded="false"
-            aria-controls="primaryMenu"
-          >
-            ☰
-          </button>
-          <ul id="primaryMenu" class="menu">
-            <li><a href="index.html">Trang chủ</a></li>
-            <li><a href="about.html">Về nhóm</a></li>
-            <li><a href="contact.html">Liên hệ</a></li>
-          </ul>
-        </nav>
+        <div class="flex items-center justify-between py-4">
+          <a href="../index.html" class="flex items-center gap-3 group">
+            <div class="relative">
+              <img src="../assets/images/logo.png" alt="Team Logo" class="w-12 h-12 rounded-full border-2 border-primary-500 group-hover:border-primary-400 transition-all group-hover:scale-110" />
+              <div class="absolute -inset-1 bg-primary-500/20 rounded-full blur-md opacity-0 group-hover:opacity-100 transition-opacity"></div>
+            </div>
+            <div>
+              <span class="text-xl font-bold text-gradient block">TÂY DU KÝ</span>
+              <span class="text-xs text-surface-400">Web Dev Team</span>
+            </div>
+          </a>
+
+          <nav aria-label="Primary">
+            <button
+              id="menuToggle"
+              class="menu-toggle"
+              aria-expanded="false"
+              aria-controls="primaryMenu"
+            >
+              ☰
+            </button>
+
+            <ul id="primaryMenu" class="hidden md:flex gap-6 items-center">
+              <li><a href="../index.html" class="nav-link">Trang chủ</a></li>
+              <li><a href="about.html" class="nav-link">Về nhóm</a></li>
+              <li><a href="contact.html" class="nav-link">Liên hệ</a></li>
+            </ul>
+          </nav>
+        </div>
       </div>
     </header>
 
-    <main class="container layout">
-      <aside class="sidebar">
-        <h3>Điều hướng</h3>
-        <ul>
-          <li><a href="mission.html">Sứ mệnh</a></li>
-          <li><a href="vision.html">Tầm nhìn</a></li>
-          <li><a href="values.html">Giá trị cốt lõi</a></li>
-          <li><a href="index.html#members">Danh sách thành viên</a></li>
-        </ul>
-      </aside>
-
-      <section class="content">
-        <section class="hero">
-          <h1>Sứ mệnh của nhóm</h1>
-          <p>Định hướng và mục tiêu học tập của nhóm sinh viên chúng tôi</p>
-        </section>
-
-        <section class="mission-detail">
-          <div class="mission-intro">
-            <h2>Tại sao chúng tôi thành lập nhóm?</h2>
-            <p>
-              Nhóm <b>Tây Du Ký</b> được thành lập với sứ mệnh hoàn thành xuất
-              sắc bài tập lớn môn học, đồng thời phát triển kỹ năng làm việc
-              nhóm và nâng cao năng lực lập trình thực tế của các thành viên sau
-              khi học xong môn <b> Phát triển ứng dụng Web </b>
-            </p>
-          </div>
-
-          <div class="mission-goals">
-            <h2>Mục tiêu cụ thể</h2>
-            <div class="goals-grid">
-              <div class="goal-card">
-                <h3>Hoàn thành bài tập lớn</h3>
-                <p>
-                  Xây dựng website đáp ứng đầy đủ yêu cầu của môn học với chất
-                  lượng tốt nhất.
-                </p>
+    <!-- Main Content -->
+    <main class="flex-1">
+      <div class="container py-12">
+        <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
+          
+          <!-- Sidebar -->
+          <aside class="lg:col-span-1">
+            <div class="sidebar">
+              <h3 class="sidebar-title">📑 Thông tin chi tiết</h3>
+              <div class="space-y-2">
+                <a href="mission.html" class="block py-2 px-3 text-primary-400 bg-surface-700 font-semibold rounded">
+                  → Sứ mệnh
+                </a>
+                <a href="vision.html" class="block py-2 px-3 text-surface-300 hover:text-primary-400 hover:bg-surface-700 rounded transition-colors">
+                  → Tầm nhìn
+                </a>
+                <a href="values.html" class="block py-2 px-3 text-surface-300 hover:text-primary-400 hover:bg-surface-700 rounded transition-colors">
+                  → Giá trị cốt lõi
+                </a>
+                
               </div>
+            </div>
+          </aside>
 
-              <div class="goal-card">
-                <h3>Áp dụng kiến thức đã học</h3>
-                <p>
-                  Thực hành các công nghệ web như HTML, CSS, JavaScript và các
-                  framework đã được học.
-                </p>
-              </div>
-
-              <div class="goal-card">
-                <h3>Rèn luyện kỹ năng teamwork</h3>
-                <p>
-                  Phát triển kỹ năng giao tiếp, phân công công việc và phối hợp
-                  hiệu quả giữa các thành viên.
-                </p>
-              </div>
-
-              <div class="goal-card">
-                <h3>Chuẩn bị cho tương lai</h3>
-                <p>
-                  Tích lũy kinh nghiệm thực tế để sẵn sàng cho các dự án và công
-                  việc sau khi ra trường.
+          <!-- Content -->
+          <section class="lg:col-span-3 space-y-8">
+            <!-- Hero -->
+            <div class="card-gradient">
+              <div class="card-body text-center">
+                <span class="badge-primary badge-lg mb-3 inline-flex">🎯 Our Mission</span>
+                <h1 class="text-4xl font-bold text-gradient mb-4">Sứ mệnh của nhóm</h1>
+                <p class="text-lg text-surface-200">
+                  Định hướng và mục tiêu học tập của nhóm sinh viên chúng tôi
                 </p>
               </div>
             </div>
-          </div>
 
-          <div class="mission-approach">
-            <h2>Phương pháp làm việc</h2>
-            <div class="approach-content">
-              <div class="approach-text">
-                <h3>Lập kế hoạch chi tiết</h3>
-                <p>
-                  Nhóm chúng em xây dựng kế hoạch làm việc rõ ràng, phân chia công
-                  việc cụ thể cho từng thành viên.
-                </p>
-
-                <h3>Họp nhóm thường xuyên</h3>
-                <p>
-                  Tổ chức các buổi họp định kỳ để cập nhật tiến độ và giải quyết
-                  các vấn đề phát sinh.
-                </p>
-
-                <h3>Hỗ trợ lẫn nhau</h3>
-                <p>
-                  Các thành viên tích cực giúp đỡ nhau trong học tập và giải
-                  quyết các khó khăn kỹ thuật.
+            <!-- Why Section -->
+            <div class="card hover-lift">
+              <div class="card-header">
+                <h2 class="text-2xl font-bold text-primary-400 flex items-center gap-2">
+                  <span>❓</span> Tại sao chúng tôi thành lập nhóm?
+                </h2>
+              </div>
+              <div class="card-body">
+                <p class="card-text text-lg">
+                  Nhóm <strong class="text-primary-400">Tây Du Ký</strong> được thành lập với sứ mệnh hoàn thành xuất
+                  sắc bài tập lớn môn học, đồng thời phát triển kỹ năng làm việc
+                  nhóm và nâng cao năng lực lập trình thực tế của các thành viên sau
+                  khi học xong môn <strong class="text-primary-400">Phát triển ứng dụng Web</strong>
                 </p>
               </div>
             </div>
-          </div>
-      </section>
+
+            <!-- Goals Section -->
+            <div>
+              <h2 class="text-3xl font-bold text-gradient mb-6">🎯 Mục tiêu cụ thể</h2>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="card-hover hover-lift">
+                  <div class="card-body">
+                    <div class="w-12 h-12 rounded-full bg-primary-500 flex items-center justify-center text-2xl mb-4">
+                      ✅
+                    </div>
+                    <h3 class="card-title mb-3">Hoàn thành bài tập lớn</h3>
+                    <p class="card-text">
+                      Xây dựng website đáp ứng đầy đủ yêu cầu của môn học với chất
+                      lượng tốt nhất.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="card-hover hover-lift">
+                  <div class="card-body">
+                    <div class="w-12 h-12 rounded-full bg-accent-500 flex items-center justify-center text-2xl mb-4">
+                      📚
+                    </div>
+                    <h3 class="card-title mb-3">Áp dụng kiến thức đã học</h3>
+                    <p class="card-text">
+                      Thực hành các công nghệ web như HTML, CSS, JavaScript và các
+                      framework đã được học.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="card-hover hover-lift">
+                  <div class="card-body">
+                    <div class="w-12 h-12 rounded-full bg-green-500 flex items-center justify-center text-2xl mb-4">
+                      🤝
+                    </div>
+                    <h3 class="card-title mb-3">Rèn luyện kỹ năng teamwork</h3>
+                    <p class="card-text">
+                      Phát triển kỹ năng giao tiếp, phân công công việc và phối hợp
+                      hiệu quả giữa các thành viên.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="card-hover hover-lift">
+                  <div class="card-body">
+                    <div class="w-12 h-12 rounded-full bg-yellow-500 flex items-center justify-center text-2xl mb-4">
+                      🚀
+                    </div>
+                    <h3 class="card-title mb-3">Chuẩn bị cho tương lai</h3>
+                    <p class="card-text">
+                      Tích lũy kinh nghiệm thực tế để sẵn sàng cho các dự án và công
+                      việc sau khi ra trường.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Approach Section -->
+            <div class="card">
+              <div class="card-header">
+                <h2 class="text-2xl font-bold text-accent-400 flex items-center gap-2">
+                  <span>⚙️</span> Phương pháp làm việc
+                </h2>
+              </div>
+              <div class="card-body space-y-6">
+                <div class="flex gap-4">
+                  <div class="flex-shrink-0 w-10 h-10 rounded-full bg-primary-500 flex items-center justify-center font-bold">
+                    1
+                  </div>
+                  <div>
+                    <h3 class="font-bold text-primary-400 text-lg mb-2">Lập kế hoạch chi tiết</h3>
+                    <p class="text-surface-300">
+                      Nhóm chúng em xây dựng kế hoạch làm việc rõ ràng, phân chia công
+                      việc cụ thể cho từng thành viên.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="divider"></div>
+
+                <div class="flex gap-4">
+                  <div class="flex-shrink-0 w-10 h-10 rounded-full bg-accent-500 flex items-center justify-center font-bold">
+                    2
+                  </div>
+                  <div>
+                    <h3 class="font-bold text-accent-400 text-lg mb-2">Họp nhóm thường xuyên</h3>
+                    <p class="text-surface-300">
+                      Tổ chức các buổi họp định kỳ để cập nhật tiến độ và giải quyết
+                      các vấn đề phát sinh.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="divider"></div>
+
+                <div class="flex gap-4">
+                  <div class="flex-shrink-0 w-10 h-10 rounded-full bg-green-500 flex items-center justify-center font-bold">
+                    3
+                  </div>
+                  <div>
+                    <h3 class="font-bold text-green-400 text-lg mb-2">Hỗ trợ lẫn nhau</h3>
+                    <p class="text-surface-300">
+                      Các thành viên tích cực giúp đỡ nhau trong học tập và giải
+                      quyết các khó khăn kỹ thuật.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+        </div>
+      </div>
     </main>
 
-    <footer class="site-footer">
-      <div class="container">
-        <small>&copy; 2025 TayDuKy</small>
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-bottom">
+        <p class="footer-copyright">
+          © 2025 Tây Du Ký Team. All rights reserved.
+        </p>
       </div>
     </footer>
 
-    <script src="js/script.js"></script>
+    <script src="../js/script.js"></script>
   </body>
 </html>
+             

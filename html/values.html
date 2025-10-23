@@ -1,172 +1,303 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="vi" class="scrollbar-custom">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>TÂY DU KÝ - Giá trị cốt lõi</title>
-    <link rel="stylesheet" href="css/output.css" />
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/format-about.css" />
+    <link rel="stylesheet" href="../css/output.css" />
   </head>
-  <body>
-    <header class="site-header">
+  <body class="min-h-screen flex flex-col scrollbar-custom">
+    <!-- Header -->
+    <header class="header">
       <div class="container">
-        <a class="brand" href="index.html">
-          <img src="assets/images/logo.png" alt="GA01 Logo" />
-          <span>TÂY DU KÝ</span>
-        </a>
-        <nav class="nav" aria-label="Primary">
-          <button
-            id="menuToggle"
-            class="menu-toggle"
-            aria-expanded="false"
-            aria-controls="primaryMenu"
-          >
-            ☰
-          </button>
-          <ul id="primaryMenu" class="menu">
-            <li><a href="index.html">Trang chủ</a></li>
-            <li><a href="about.html">Về nhóm</a></li>
-            <li><a href="contact.html">Liên hệ</a></li>
-          </ul>
-        </nav>
+        <div class="flex items-center justify-between py-4">
+          <a href="../index.html" class="flex items-center gap-3 group">
+            <div class="relative">
+              <img src="../assets/images/logo.png" alt="Team Logo" class="w-12 h-12 rounded-full border-2 border-primary-500 group-hover:border-primary-400 transition-all group-hover:scale-110" />
+              <div class="absolute -inset-1 bg-primary-500/20 rounded-full blur-md opacity-0 group-hover:opacity-100 transition-opacity"></div>
+            </div>
+            <div>
+              <span class="text-xl font-bold text-gradient block">TÂY DU KÝ</span>
+              <span class="text-xs text-surface-400">Web Dev Team</span>
+            </div>
+          </a>
+
+          <nav aria-label="Primary">
+            <button
+              id="menuToggle"
+              class="menu-toggle"
+              aria-expanded="false"
+              aria-controls="primaryMenu"
+            >
+              ☰
+            </button>
+
+            <ul id="primaryMenu" class="hidden md:flex gap-6 items-center">
+              <li><a href="../index.html" class="nav-link">Trang chủ</a></li>
+              <li><a href="about.html" class="nav-link">Về nhóm</a></li>
+              <li><a href="contact.html" class="nav-link">Liên hệ</a></li>
+            </ul>
+          </nav>
+        </div>
       </div>
     </header>
 
-    <main class="container layout">
-      <aside class="sidebar">
-        <h3>Điều hướng</h3>
-        <ul>
-          <li><a href="mission.html">Sứ mệnh</a></li>
-          <li><a href="vision.html">Tầm nhìn</a></li>
-          <li><a href="values.html">Giá trị cốt lõi</a></li>
-          <li><a href="index.html#members">Danh sách thành viên</a></li>
-        </ul>
-      </aside>
-
-      <section class="content">
-        <section class="hero">
-          <h1>Giá trị cốt lõi của nhóm</h1>
-          <p>
-            Những nguyên tắc định hướng mọi hoạt động học tập và làm việc của
-            nhóm.
-          </p>
-        </section>
-
-        <section class="values">
-          <div id="hoc-tap" class="value-item">
-            <div class="value-header">
-              <h2>Học tập không ngừng</h2>
+    <!-- Main Content -->
+    <main class="flex-1">
+      <div class="container py-12">
+        <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
+          
+          <!-- Sidebar -->
+          <aside class="lg:col-span-1">
+            <div class="sidebar">
+              <h3 class="sidebar-title">📑 Thông tin chi tiết</h3>
+              <div class="space-y-2">
+                <a href="mission.html" class="block py-2 px-3 text-surface-300 hover:text-primary-400 hover:bg-surface-700 rounded transition-colors">
+                  → Sứ mệnh
+                </a>
+                <a href="vision.html" class="block py-2 px-3 text-surface-300 hover:text-primary-400 hover:bg-surface-700 rounded transition-colors">
+                  → Tầm nhìn
+                </a>
+                <a href="values.html" class="block py-2 px-3 text-primary-400 bg-surface-700 font-semibold rounded">
+                  → Giá trị cốt lõi
+                </a>
+                
+              </div>
             </div>
-            <p>
-              Chúng em luôn tìm kiếm cơ hội để học hỏi và phát triển kỹ năng.
-              Mỗi project là một cơ hội để áp dụng kiến thức đã học và khám phá
-              những công nghệ mới trong lĩnh vực phát triển web.
-            </p>
-            <ul class="value-examples">
-              <li>Chia sẻ kiến thức giữa các thành viên</li>
-              <li>Thực hành các kiến thức được học trên lớp</li>
-            </ul>
-          </div>
+          </aside>
 
-          <div id="hop-tac" class="value-item">
-            <div class="value-header">
-              <h2>Hợp tác hiệu quả</h2>
+          <!-- Content -->
+          <section class="lg:col-span-3 space-y-8">
+            <!-- Hero -->
+            <div class="card-gradient">
+              <div class="card-body text-center">
+                <span class="badge-success badge-lg mb-3 inline-flex">💎 Core Values</span>
+                <h1 class="text-4xl font-bold text-gradient mb-4">Giá trị cốt lõi của nhóm</h1>
+                <p class="text-lg text-surface-200">
+                  Những nguyên tắc định hướng mọi hoạt động học tập và làm việc của nhóm
+                </p>
+              </div>
             </div>
-            <p>
-              Sức mạnh của nhóm đến từ sự hợp tác. Nhóm tin rằng làm việc cùng
-              nhau sẽ tạo ra kết quả tốt hơn bất kỳ cá nhân nào có thể đạt được
-              một mình.
-            </p>
-            <ul class="value-examples">
-              <li>Họp nhóm định kỳ hàng tuần</li>
-              <li>Phân công công việc rõ ràng</li>
-              <li>Hỗ trợ lẫn nhau khi gặp khó khăn</li>
-            </ul>
-          </div>
 
-          <div id="sang-tao" class="value-item">
-            <div class="value-header">
-              <h2>Sáng tạo trong giải pháp</h2>
+            <!-- Value 1 -->
+            <div id="hoc-tap" class="card hover-lift">
+              <div class="card-header">
+                <h2 class="text-2xl font-bold text-primary-400 flex items-center gap-2">
+                  <span>📚</span> Học tập không ngừng
+                </h2>
+              </div>
+              <div class="card-body">
+                <p class="card-text mb-4">
+                  Chúng em luôn tìm kiếm cơ hội để học hỏi và phát triển kỹ năng.
+                  Mỗi project là một cơ hội để áp dụng kiến thức đã học và khám phá
+                  những công nghệ mới trong lĩnh vực phát triển web.
+                </p>
+                <div class="bg-surface-700/50 rounded-lg p-4">
+                  <h4 class="font-bold text-primary-400 mb-2">Cách thực hiện:</h4>
+                  <ul class="space-y-2 text-surface-300">
+                    <li class="flex items-start gap-2">
+                      <span class="text-primary-400 mt-1">→</span>
+                      <span>Chia sẻ kiến thức giữa các thành viên</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="text-primary-400 mt-1">→</span>
+                      <span>Thực hành các kiến thức được học trên lớp</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </div>
-            <p>
-              Nhóm luôn khuyến khích sự sáng tạo trong mỗi thành viên và tìm
-              kiếm những giải pháp độc đáo cho các bài tập.
-            </p>
-            <ul class="value-examples">
-              <li>Brainstorming ý tưởng mới</li>
-              <li>Thử nghiệm các phương pháp tiếp cận khác nhau</li>
-              <li>Ứng dụng linh hoạt kiến thức đã học</li>
-            </ul>
-          </div>
 
-          <div id="trach-nhiem" class="value-item">
-            <div class="value-header">
-              <h2>Trách nhiệm với công việc</h2>
+            <!-- Value 2 -->
+            <div id="hop-tac" class="card hover-lift">
+              <div class="card-header">
+                <h2 class="text-2xl font-bold text-accent-400 flex items-center gap-2">
+                  <span>🤝</span> Hợp tác hiệu quả
+                </h2>
+              </div>
+              <div class="card-body">
+                <p class="card-text mb-4">
+                  Sức mạnh của nhóm đến từ sự hợp tác. Nhóm tin rằng làm việc cùng
+                  nhau sẽ tạo ra kết quả tốt hơn bất kỳ cá nhân nào có thể đạt được
+                  một mình.
+                </p>
+                <div class="bg-surface-700/50 rounded-lg p-4">
+                  <h4 class="font-bold text-accent-400 mb-2">Cách thực hiện:</h4>
+                  <ul class="space-y-2 text-surface-300">
+                    <li class="flex items-start gap-2">
+                      <span class="text-accent-400 mt-1">→</span>
+                      <span>Họp nhóm định kỳ hàng tuần</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="text-accent-400 mt-1">→</span>
+                      <span>Phân công công việc rõ ràng</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="text-accent-400 mt-1">→</span>
+                      <span>Hỗ trợ lẫn nhau khi gặp khó khăn</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </div>
-            <p>
-              Mỗi thành viên đều có trách nhiệm hoàn thành phần việc được giao
-              đúng hạn và với chất lượng tốt nhất, đảm bảo tiến độ chung của
-              nhóm.
-            </p>
-            <ul class="value-examples">
-              <li>Hoàn thành deadline đã cam kết</li>
-              <li>Báo cáo tiến độ thường xuyên</li>
-              <li>Chủ động giải quyết vấn đề</li>
-              <li>Commit theo yêu cầu nhóm</li>
-            </ul>
-          </div>
 
-          <div id="quy-trinh" class="value-item">
-            <div class="value-header">
-              <h2>Quy trình & Công cụ</h2>
+            <!-- Value 3 -->
+            <div id="sang-tao" class="card hover-lift">
+              <div class="card-header">
+                <h2 class="text-2xl font-bold text-yellow-400 flex items-center gap-2">
+                  <span>💡</span> Sáng tạo trong giải pháp
+                </h2>
+              </div>
+              <div class="card-body">
+                <p class="card-text mb-4">
+                  Nhóm luôn khuyến khích sự sáng tạo trong mỗi thành viên và tìm
+                  kiếm những giải pháp độc đáo cho các bài tập.
+                </p>
+                <div class="bg-surface-700/50 rounded-lg p-4">
+                  <h4 class="font-bold text-yellow-400 mb-2">Cách thực hiện:</h4>
+                  <ul class="space-y-2 text-surface-300">
+                    <li class="flex items-start gap-2">
+                      <span class="text-yellow-400 mt-1">→</span>
+                      <span>Brainstorming ý tưởng mới</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="text-yellow-400 mt-1">→</span>
+                      <span>Thử nghiệm các phương pháp tiếp cận khác nhau</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="text-yellow-400 mt-1">→</span>
+                      <span>Ứng dụng linh hoạt kiến thức đã học</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </div>
-            <p>
-              Để quản lí dễ dàng hơn bằng Github, nhóm trưởng
-              <b>Trần Mạnh Hùng</b> đưa ra quy định commit như sau:
-            </p>
-            <ul class="value-examples">
-              <li>Quy ước commit: Conventional Commits, scope theo khu vực (index, about, members, css, js, assets, readme)</li>
-              <li>Nhánh làm việc: feature/<alias>/<topic>, fix/<alias>/<topic></li>
-              <li>Code review qua Pull Request trước khi merge</li>
-            </ul>
-          </div>
 
-          <div id="cong-nghe" class="value-item">
-            <div class="value-header">
-              <h2>Công nghệ sử dụng</h2>
+            <!-- Value 4 -->
+            <div id="trach-nhiem" class="card hover-lift">
+              <div class="card-header">
+                <h2 class="text-2xl font-bold text-green-400 flex items-center gap-2">
+                  <span>✅</span> Trách nhiệm với công việc
+                </h2>
+              </div>
+              <div class="card-body">
+                <p class="card-text mb-4">
+                  Mỗi thành viên đều có trách nhiệm hoàn thành phần việc được giao
+                  đúng hạn và với chất lượng tốt nhất, đảm bảo tiến độ chung của
+                  nhóm.
+                </p>
+                <div class="bg-surface-700/50 rounded-lg p-4">
+                  <h4 class="font-bold text-green-400 mb-2">Cách thực hiện:</h4>
+                  <ul class="space-y-2 text-surface-300">
+                    <li class="flex items-start gap-2">
+                      <span class="text-green-400 mt-1">→</span>
+                      <span>Hoàn thành deadline đã cam kết</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="text-green-400 mt-1">→</span>
+                      <span>Báo cáo tiến độ thường xuyên</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="text-green-400 mt-1">→</span>
+                      <span>Chủ động giải quyết vấn đề</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="text-green-400 mt-1">→</span>
+                      <span>Commit theo yêu cầu nhóm</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </div>
-            <p>
-              Dưới đây là các công cụ nhóm sử dụng trong quá trình tạo ra website
-            </p>
-            <ul>
-              <li>HTML5, CSS3 (CSS variables, responsive grid)</li>
-              <li>JavaScript thuần (mobile menu)</li>
-              <li>Hosting: Vercel</li>
-            </ul>
-          </div>
 
-        </section>
+            <!-- Value 5 - Process -->
+            <div id="quy-trinh" class="card hover-lift">
+              <div class="card-header">
+                <h2 class="text-2xl font-bold text-blue-400 flex items-center gap-2">
+                  <span>⚙️</span> Quy trình & Công cụ
+                </h2>
+              </div>
+              <div class="card-body">
+                <p class="card-text mb-4">
+                  Để quản lí dễ dàng hơn bằng Github, nhóm trưởng
+                  <strong class="text-primary-400">Trần Mạnh Hùng</strong> đưa ra quy định commit như sau:
+                </p>
+                <div class="bg-surface-700/50 rounded-lg p-4">
+                  <ul class="space-y-2 text-surface-300">
+                    <li class="flex items-start gap-2">
+                      <span class="text-blue-400 mt-1">→</span>
+                      <span>Quy ước commit: Conventional Commits, scope theo khu vực (index, about, members, css, js, assets, readme)</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="text-blue-400 mt-1">→</span>
+                      <span>Nhánh làm việc: feature/&lt;alias&gt;/&lt;topic&gt;, fix/&lt;alias&gt;/&lt;topic&gt;</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="text-blue-400 mt-1">→</span>
+                      <span>Code review qua Pull Request trước khi merge</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
 
-        <section class="values-summary">
-          <h2>Tổng kết</h2>
-          <div class="summary-content">
-            <p>
-              Các giá trị cốt lõi đề ra ở trên của nhóm không chỉ giúp chúng em
-              hoàn thành tốt các bài tập nhóm mà còn xây dựng nền tảng vững chắc
-              cho sự nghiệp tương lai của mỗi thành viên.
-            </p>
-          </div>
-        </section>
-      </section>
+            <!-- Value 6 - Tech Stack -->
+            <div id="cong-nghe" class="card hover-lift">
+              <div class="card-header">
+                <h2 class="text-2xl font-bold text-purple-400 flex items-center gap-2">
+                  <span>🛠️</span> Công nghệ sử dụng
+                </h2>
+              </div>
+              <div class="card-body">
+                <p class="card-text mb-4">
+                  Dưới đây là các công cụ nhóm sử dụng trong quá trình tạo ra website
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div class="flex items-center gap-2">
+                    <span class="badge-primary">HTML5</span>
+                    <span class="badge-primary">CSS3</span>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <span class="badge-accent">JavaScript</span>
+                    <span class="badge-accent">Tailwind</span>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <span class="badge-success">Git</span>
+                    <span class="badge-success">GitHub</span>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <span class="badge-secondary">Vercel</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Summary -->
+            <div class="card-gradient">
+              <div class="card-body">
+                <h2 class="text-2xl font-bold text-white mb-4 text-center">✨ Tổng kết</h2>
+                <p class="text-lg text-surface-100 text-center">
+                  Các giá trị cốt lõi đề ra ở trên của nhóm không chỉ giúp chúng em
+                  hoàn thành tốt các bài tập nhóm mà còn xây dựng nền tảng vững chắc
+                  cho sự nghiệp tương lai của mỗi thành viên.
+                </p>
+              </div>
+            </div>
+          </section>
+
+        </div>
+      </div>
     </main>
 
-    <footer class="site-footer">
-      <div class="container">
-        <small>&copy; 2025 TayDuKy</small>
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-bottom">
+        <p class="footer-copyright">
+          © 2025 Tây Du Ký Team. All rights reserved.
+        </p>
       </div>
     </footer>
 
-    <script src="js/script.js"></script>
+    <script src="../js/script.js"></script>
   </body>
 </html>

@@ -1,97 +1,197 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="vi" class="scrollbar-custom">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Tây Du Ký - Trần Mạnh Hùng (Lead)</title>
     <link rel="stylesheet" href="../css/output.css" />
-    <link rel="stylesheet" href="../css/style.css" />
   </head>
-  <body>
-    <header class="site-header">
+  <body class="min-h-screen flex flex-col scrollbar-custom">
+    <!-- Header -->
+    <header class="header">
       <div class="container">
-        <a class="brand" href="../index.html">
-          <img src="../assets/images/logo.png" alt="Team Logo" />
-          <span>TÂY DU KÝ</span>
-        </a>
-        <nav class="nav" aria-label="Primary">
-          <button
-            id="menuToggle"
-            class="menu-toggle"
-            aria-expanded="false"
-            aria-controls="primaryMenu"
-          >
-            ☰
-          </button>
-          <ul id="primaryMenu" class="menu">
-            <li><a href="../index.html">Trang chủ</a></li>
-            <li><a href="../about.html">Về nhóm</a></li>
-            <li><a href="../index.html#members">Thành viên</a></li>
-            <li><a href="../contact.html">Liên hệ</a></li>
-          </ul>
-        </nav>
+        <div class="flex items-center justify-between py-4">
+          <a href="../index.html" class="flex items-center gap-3 group">
+            <div class="relative">
+              <img src="../assets/images/logo.png" alt="Team Logo" class="w-12 h-12 rounded-full border-2 border-primary-500 group-hover:border-primary-400 transition-all group-hover:scale-110" />
+              <div class="absolute -inset-1 bg-primary-500/20 rounded-full blur-md opacity-0 group-hover:opacity-100 transition-opacity"></div>
+            </div>
+            <div>
+              <span class="text-xl font-bold text-gradient block">TÂY DU KÝ</span>
+              <span class="text-xs text-surface-400">Web Dev Team</span>
+            </div>
+          </a>
+
+          <nav aria-label="Primary">
+            <button
+              id="menuToggle"
+              class="menu-toggle"
+              aria-expanded="false"
+              aria-controls="primaryMenu"
+            >
+              ☰
+            </button>
+
+            <ul id="primaryMenu" class="hidden md:flex gap-6 items-center">
+              <li><a href="../index.html" class="nav-link">Trang chủ</a></li>
+              <li><a href="../html/about.html" class="nav-link">Về nhóm</a></li>
+              <li><a href="../html/contact.html" class="nav-link">Liên hệ</a></li>
+            </ul>
+          </nav>
+        </div>
       </div>
     </header>
 
-    <main class="container layout"> 
+    <!-- Main Content -->
+    <main class="flex-1">
+      <div class="container py-12">
+        <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
+          
+          <!-- Sidebar -->
+          <aside class="lg:col-span-1">
+            <div class="sidebar sticky top-4">
+              <h3 class="sidebar-title">📋 Thông tin</h3>
+              <div class="space-y-4">
+                <div class="bg-surface-700/50 rounded-lg p-4">
+                  <p class="text-sm text-surface-400 mb-1">Vai trò</p>
+                  <p class="font-semibold text-primary-400">Team Lead</p>
+                </div>
+                <div class="bg-surface-700/50 rounded-lg p-4">
+                  <p class="text-sm text-surface-400 mb-1">Chuyên môn</p>
+                  <p class="font-semibold text-surface-200">Lập kế hoạch, Full-stack</p>
+                </div>
+                <div class="bg-surface-700/50 rounded-lg p-4">
+                  <p class="text-sm text-surface-400 mb-2">Tech Stack</p>
+                  <div class="flex flex-wrap gap-2">
+                    <span class="badge-primary badge-sm">HTML</span>
+                    <span class="badge-primary badge-sm">CSS</span>
+                    <span class="badge-primary badge-sm">JavaScript</span>
+                    <span class="badge-accent badge-sm">Python</span>
+                    <span class="badge-accent badge-sm">Node.js</span>
+                    <span class="badge-accent badge-sm">Java</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </aside>
 
-      <aside class="sidebar">
-        <h3>Thông tin</h3>
-        <div class="info-list">
-          <div class="info-item">
-            <span class="label">Vai trò</span>
-            <span class="value">Thành viên</span>
-          </div>
-          <div class="info-item">
-            <span class="label">Kỹ năng</span>
-            <span class="value">Lập kế hoạch, Full‑stack</span>
-          </div>
-          <div class="info-item">
-            <span class="label">Ngôn ngữ</span>
-            <span class="value">HTML, CSS, JavaScript, Python, Node.js, Java</span>
-          </div>
+          <!-- Content -->
+          <section class="lg:col-span-3 space-y-8">
+            
+            <!-- Profile Card -->
+            <div class="card-gradient">
+              <div class="card-body">
+                <div class="flex flex-col md:flex-row items-center md:items-start gap-6">
+                  <div class="relative group">
+                    <img
+                      class="w-32 h-32 rounded-full border-4 border-primary-500 object-cover"
+                      src="../assets/images/Hung.jpg"
+                      alt="Trần Mạnh Hùng"
+                    />
+                    <div class="absolute -inset-2 bg-primary-500/20 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                  </div>
+                  <div class="flex-1 text-center md:text-left">
+                    <h1 class="text-4xl font-bold text-white mb-2">Trần Mạnh Hùng</h1>
+                    <span class="badge-primary badge-lg inline-flex mb-4">👑 Team Lead</span>
+                    <p class="text-surface-200 text-lg">
+                      Sinh viên năm 3 khoa công nghệ thông tin Trường Đại Học Khoa Học Tự
+                      Nhiên, ĐHQG TP.HCM. Đam mê code, luôn tìm tòi, sáng tạo, đổi mới và
+                      học hỏi
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Introduction Section -->
+            <div class="card hover-lift">
+              <div class="card-header">
+                <h2 class="text-2xl font-bold text-primary-400 flex items-center gap-2">
+                  <span>👨‍💻</span> Giới thiệu
+                </h2>
+              </div>
+              <div class="card-body">
+                <p class="card-text mb-4">
+                  Sinh viên năm 3 khoa công nghệ thông tin Trường Đại Học Khoa Học Tự
+                  Nhiên, ĐHQG TP.HCM. Đam mê code, luôn tìm tòi, sáng tạo, đổi mới và
+                  học hỏi về các công nghệ mới.
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-6">
+                  <div class="flex items-center gap-3 p-4 bg-surface-700/50 rounded-lg">
+                    <span class="text-3xl">🎯</span>
+                    <div>
+                      <p class="text-sm text-surface-400">Vai trò</p>
+                      <p class="font-semibold text-primary-400">Leader</p>
+                    </div>
+                  </div>
+                  <div class="flex items-center gap-3 p-4 bg-surface-700/50 rounded-lg">
+                    <span class="text-3xl">💼</span>
+                    <div>
+                      <p class="text-sm text-surface-400">Kinh nghiệm</p>
+                      <p class="font-semibold text-primary-400">Full-stack</p>
+                    </div>
+                  </div>
+                  <div class="flex items-center gap-3 p-4 bg-surface-700/50 rounded-lg">
+                    <span class="text-3xl">🏫</span>
+                    <div>
+                      <p class="text-sm text-surface-400">Trường</p>
+                      <p class="font-semibold text-primary-400">HCMUS</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Projects Section -->
+            <div class="card hover-lift">
+              <div class="card-header">
+                <h2 class="text-2xl font-bold text-accent-400 flex items-center gap-2">
+                  <span>🚀</span> Dự án tiêu biểu
+                </h2>
+              </div>
+              <div class="card-body">
+                <div class="space-y-4">
+                  <div class="p-5 bg-surface-700/50 rounded-lg hover:bg-surface-700 transition-colors border border-surface-600 hover:border-accent-500">
+                    <div class="flex items-start justify-between">
+                      <div>
+                        <h3 class="text-xl font-bold text-white mb-2">FreeLand Platform</h3>
+                        <p class="text-surface-300 mb-3">Nền tảng kết nối freelancer và khách hàng</p>
+                        <div class="flex flex-wrap gap-2 mb-3">
+                          <span class="badge-secondary badge-sm">React</span>
+                          <span class="badge-secondary badge-sm">Node.js</span>
+                          <span class="badge-secondary badge-sm">MongoDB</span>
+                        </div>
+                      </div>
+                      <span class="text-4xl">💼</span>
+                    </div>
+                    <a href="https://freeland-hcmus.vercel.app/" target="_blank" class="btn btn-accent btn-sm inline-flex items-center gap-2">
+                      <span>Xem chi tiết</span>
+                      <span>→</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Back Button -->
+            <div class="flex justify-center">
+              <a href="../index.html#members" class="btn btn-outline">
+                ← Quay lại danh sách thành viên
+              </a>
+            </div>
+
+          </section>
+
         </div>
-      </aside>
-
-      <section class="content">
-        <header class="member-header">
-          <img
-            class="avatar"
-            src="../assets/images/Hung.jpg"
-            alt="Trần Mạnh Hùng"
-          />
-          <div>
-            <h1>Trần Mạnh Hùng</h1>
-            <small>&copy; 2025 Tây Du Ký</small>
-          </div>
-        </header>
-
-        <section>
-          <h2>Giới thiệu</h2>
-          <p>
-            Sinh viên năm 3 khoa công nghệ thông tin Trường Đại Học Khoa Học Tự
-            Nhiên, ĐHQG TP.HCM. Đam mê code, luôn tìm tòi, sáng tạo, đổi mới và
-            học hỏi
-          </p>
-        </section>
-
-        <section>
-          <h2>Dự án tiêu biểu</h2>
-          <ul>
-            <li>
-              Dự án web FreeLand :
-              <a href="https://freeland-hcmus.vercel.app/" target="_blank"
-                >Xem chi tiết</a
-              >
-            </li>
-          </ul>
-        </section>
-      </section>
+      </div>
     </main>
 
-    <footer class="site-footer">
-      <div class="container">
-        <small>&copy; 2025 TÂY DU KÝ</small>
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-bottom">
+        <p class="footer-copyright">
+          © 2025 Tây Du Ký Team. All rights reserved.
+        </p>
       </div>
     </footer>
 

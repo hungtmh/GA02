@@ -1,228 +1,305 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="vi" class="scrollbar-custom">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Tây Du Ký - Liên hệ</title>
-    <link rel="stylesheet" href="css/output.css" />
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/contact.css" />
+    <link rel="stylesheet" href="../css/output.css" />
   </head>
-  <body>
-    <header class="site-header">
+  <body class="min-h-screen flex flex-col scrollbar-custom">
+    <!-- Header -->
+    <header class="header">
       <div class="container">
-        <a class="brand" href="index.html">
-          <img src="assets/images/logo.png" alt="Team Logo" />
-          <span>TÂY DU KÝ</span>
-        </a>
-        <nav class="nav" aria-label="Primary">
-          <button
-            id="menuToggle"
-            class="menu-toggle"
-            aria-expanded="false"
-            aria-controls="primaryMenu"
-          >
-            ☰
-          </button>
-          <ul id="primaryMenu" class="menu">
-            <li><a href="index.html">Trang chủ</a></li>
-            <li><a href="about.html">Về nhóm</a></li>
-            <li><a href="index.html#members">Thành viên</a></li>
-            <li><a href="contact.html" class="active">Liên hệ</a></li>
-          </ul>
-        </nav>
+        <div class="flex items-center justify-between py-4">
+          <a href="../index.html" class="flex items-center gap-3 group">
+            <div class="relative">
+              <img src="../assets/images/logo.png" alt="Team Logo" class="w-12 h-12 rounded-full border-2 border-primary-500 group-hover:border-primary-400 transition-all group-hover:scale-110" />
+              <div class="absolute -inset-1 bg-primary-500/20 rounded-full blur-md opacity-0 group-hover:opacity-100 transition-opacity"></div>
+            </div>
+            <div>
+              <span class="text-xl font-bold text-gradient block">TÂY DU KÝ</span>
+              <span class="text-xs text-surface-400">Web Dev Team</span>
+            </div>
+          </a>
+
+          <nav aria-label="Primary">
+            <button
+              id="menuToggle"
+              class="menu-toggle"
+              aria-expanded="false"
+              aria-controls="primaryMenu"
+            >
+              ☰
+            </button>
+
+            <ul id="primaryMenu" class="hidden md:flex gap-6 items-center">
+              <li><a href="../index.html" class="nav-link">Trang chủ</a></li>
+              <li><a href="about.html" class="nav-link">Về nhóm</a></li>
+              <li><a href="contact.html" class="nav-link">Liên hệ</a></li>
+            </ul>
+          </nav>
+        </div>
       </div>
     </header>
 
-    <main class="container layout">
-      <aside class="sidebar">
-        <h3>Thông tin nhanh</h3>
-        <div class="info-list">
-          <div class="info-item">
-            <span class="label">Nhóm</span>
-            <span class="value">Tây Du Ký</span>
-          </div>
-          <div class="info-item">
-            <span class="label">Trường</span>
-            <span class="value">ĐH KHTN</span>
-          </div>
-          <div class="info-item">
-            <span class="label">Môn học</span>
-            <span class="value">Phát triển ứng dụng Web</span>
-          </div>
+    <!-- Main Content -->
+    <main class="flex-1">
+      <div class="container py-12">
+        <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
+          
+          <!-- Sidebar -->
+          <aside class="lg:col-span-1">
+            <div class="sidebar">
+              <h3 class="sidebar-title">📊 Thông tin nhanh</h3>
+              <div class="space-y-3">
+                <div class="sidebar-item">
+                  <span class="sidebar-label">Nhóm:</span>
+                  <span class="sidebar-value">Tây Du Ký</span>
+                </div>
+                <div class="sidebar-item">
+                  <span class="sidebar-label">Trường:</span>
+                  <span class="sidebar-value">ĐH KHTN</span>
+                </div>
+                <div class="sidebar-item">
+                  <span class="sidebar-label">Môn học:</span>
+                  <span class="sidebar-value">Web Dev</span>
+                </div>
+                <div class="sidebar-item">
+                  <span class="sidebar-label">Lớp:</span>
+                  <span class="sidebar-value">KTPM-01</span>
+                </div>
+              </div>
+            </div>
+          </aside>
+
+          <!-- Content -->
+          <section class="lg:col-span-3">
+            <!-- Hero -->
+            <div class="card-gradient mb-8">
+              <div class="card-body text-center">
+                <span class="badge-accent badge-lg mb-3 inline-flex">📧 Contact Us</span>
+                <h1 class="text-4xl font-bold text-gradient mb-4">Liên hệ với chúng tôi</h1>
+                <p class="text-lg text-surface-200">
+                  Thông tin liên lạc của nhóm Tây Du Ký cho môn học Phát triển ứng dụng Web.
+                </p>
+              </div>
+            </div>
+
+            <!-- Members Contact -->
+            <div class="mb-8">
+              <h2 class="text-3xl font-bold text-gradient mb-6">👥 Liên hệ thành viên</h2>
+              
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Member 1 -->
+                <div class="card hover-lift">
+                  <div class="card-body">
+                    <div class="flex items-center gap-4 mb-4">
+                      <img
+                        src="../assets/images/Hung.jpg"
+                        alt="Trần Mạnh Hùng"
+                        class="w-16 h-16 rounded-full border-2 border-primary-500 object-cover"
+                      />
+                      <div>
+                        <h3 class="card-title text-lg mb-1">Trần Mạnh Hùng</h3>
+                        <span class="badge-primary">Lead</span>
+                      </div>
+                    </div>
+                    <div class="space-y-2">
+                      <p class="text-sm text-surface-300">
+                        <strong class="text-primary-400">Email:</strong>
+                        <a href="mailto:tmhung23@clc.fitus.edu.vn" class="hover:text-primary-300 ml-1">
+                          tmhung23@clc.fitus.edu.vn
+                        </a>
+                      </p>
+                      <p class="text-sm text-surface-300">
+                        <strong class="text-primary-400">GitHub:</strong>
+                        <a href="https://github.com/hungtmh" target="_blank" class="hover:text-primary-300 ml-1">
+                          hungtmh
+                        </a>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Member 2 -->
+                <div class="card hover-lift">
+                  <div class="card-body">
+                    <div class="flex items-center gap-4 mb-4">
+                      <img
+                        src="../assets/images/bui-duong-duy-cuong.png"
+                        alt="Bùi Dương Duy Cường"
+                        class="w-16 h-16 rounded-full border-2 border-accent-500 object-cover"
+                      />
+                      <div>
+                        <h3 class="card-title text-lg mb-1">Bùi Dương Duy Cường</h3>
+                        <span class="badge-accent">Dev</span>
+                      </div>
+                    </div>
+                    <div class="space-y-2">
+                      <p class="text-sm text-surface-300">
+                        <strong class="text-accent-400">Email:</strong>
+                        <a href="mailto:bddcuong23@clc.fitus.edu.vn" class="hover:text-accent-300 ml-1">
+                          bddcuong23@clc.fitus.edu.vn
+                        </a>
+                      </p>
+                      <p class="text-sm text-surface-300">
+                        <strong class="text-accent-400">GitHub:</strong>
+                        <a href="https://github.com/iamDicun" target="_blank" class="hover:text-accent-300 ml-1">
+                          iamDicun
+                        </a>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Member 3 -->
+                <div class="card hover-lift">
+                  <div class="card-body">
+                    <div class="flex items-center gap-4 mb-4">
+                      <img
+                        src="../assets/images/nguyen-anh-khoa.png"
+                        alt="Nguyễn Anh Khoa"
+                        class="w-16 h-16 rounded-full border-2 border-accent-500 object-cover"
+                      />
+                      <div>
+                        <h3 class="card-title text-lg mb-1">Nguyễn Anh Khoa</h3>
+                        <span class="badge-accent">Dev</span>
+                      </div>
+                    </div>
+                    <div class="space-y-2">
+                      <p class="text-sm text-surface-300">
+                        <strong class="text-accent-400">Email:</strong>
+                        <a href="mailto:nakhoa23@clc.fitus.edu.vn" class="hover:text-accent-300 ml-1">
+                          nakhoa23@clc.fitus.edu.vn
+                        </a>
+                      </p>
+                      <p class="text-sm text-surface-300">
+                        <strong class="text-accent-400">GitHub:</strong>
+                        <a href="https://github.com/wokovn" target="_blank" class="hover:text-accent-300 ml-1">
+                          wokovn
+                        </a>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Member 4 -->
+                <div class="card hover-lift">
+                  <div class="card-body">
+                    <div class="flex items-center gap-4 mb-4">
+                      <img
+                        src="../assets/images/Thang.jpg"
+                        alt="Nguyễn Tấn Thắng"
+                        class="w-16 h-16 rounded-full border-2 border-green-500 object-cover"
+                      />
+                      <div>
+                        <h3 class="card-title text-lg mb-1">Nguyễn Tấn Thắng</h3>
+                        <span class="badge-success">Design</span>
+                      </div>
+                    </div>
+                    <div class="space-y-2">
+                      <p class="text-sm text-surface-300">
+                        <strong class="text-green-400">Email:</strong>
+                        <a href="mailto:ntthang23@clc.fitus.edu.vn" class="hover:text-green-300 ml-1">
+                          ntthang23@clc.fitus.edu.vn
+                        </a>
+                      </p>
+                      <p class="text-sm text-surface-300">
+                        <strong class="text-green-400">GitHub:</strong>
+                        <a href="https://github.com/thangak18" target="_blank" class="hover:text-green-300 ml-1">
+                          thangak18
+                        </a>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Member 5 -->
+                <div class="card hover-lift">
+                  <div class="card-body">
+                    <div class="flex items-center gap-4 mb-4">
+                      <img
+                        src="../assets/images/ninh-van-khai.JPEG"
+                        alt="Ninh Văn Khải"
+                        class="w-16 h-16 rounded-full border-2 border-accent-500 object-cover"
+                      />
+                      <div>
+                        <h3 class="card-title text-lg mb-1">Ninh Văn Khải</h3>
+                        <span class="badge-accent">Dev</span>
+                      </div>
+                    </div>
+                    <div class="space-y-2">
+                      <p class="text-sm text-surface-300">
+                        <strong class="text-accent-400">Email:</strong>
+                        <a href="mailto:nvkhai23@clc.fitus.edu.vn" class="hover:text-accent-300 ml-1">
+                          nvkhai23@clc.fitus.edu.vn
+                        </a>
+                      </p>
+                      <p class="text-sm text-surface-300">
+                        <strong class="text-accent-400">GitHub:</strong>
+                        <a href="https://github.com/nvkhai238" target="_blank" class="hover:text-accent-300 ml-1">
+                          nvkhai238
+                        </a>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- General Info -->
+            <div class="card">
+              <div class="card-header">
+                <h2 class="text-2xl font-bold text-primary-400">📌 Thông tin chung</h2>
+              </div>
+              <div class="card-body">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div class="flex items-center gap-3 p-4 bg-surface-700/50 rounded-lg">
+                    <span class="text-2xl">🏫</span>
+                    <div>
+                      <p class="text-sm text-surface-400">Trường</p>
+                      <p class="font-semibold text-primary-400">Đại học Khoa học Tự Nhiên</p>
+                    </div>
+                  </div>
+                  <div class="flex items-center gap-3 p-4 bg-surface-700/50 rounded-lg">
+                    <span class="text-2xl">👨‍🎓</span>
+                    <div>
+                      <p class="text-sm text-surface-400">Lớp</p>
+                      <p class="font-semibold text-primary-400">KTPM-01</p>
+                    </div>
+                  </div>
+                  <div class="flex items-center gap-3 p-4 bg-surface-700/50 rounded-lg">
+                    <span class="text-2xl">📚</span>
+                    <div>
+                      <p class="text-sm text-surface-400">Môn học</p>
+                      <p class="font-semibold text-primary-400">Phát triển ứng dụng Web</p>
+                    </div>
+                  </div>
+                  <div class="flex items-center gap-3 p-4 bg-surface-700/50 rounded-lg">
+                    <span class="text-2xl">👥</span>
+                    <div>
+                      <p class="text-sm text-surface-400">Nhóm</p>
+                      <p class="font-semibold text-primary-400">Tây Du Ký</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
         </div>
-      </aside>
-
-      <section class="content">
-        <section class="hero">
-          <h1>Liên hệ với chúng tôi</h1>
-          <p>
-            Thông tin liên lạc của nhóm Tây Du Ký cho môn học Phát triển ứng
-            dụng Web.
-          </p>
-        </section>
-
-        <section id="member-contact">
-          <h2>Liên hệ thành viên</h2>
-          <div class="contact-grid">
-            <div class="contact-card">
-              <header class="contact-card-header">
-                <img
-                  src="assets/images/Hung.jpg"
-                  alt="Trần Mạnh Hùng"
-                  class="avatar-small"
-                />
-                <div>
-                  <h3>Trần Mạnh Hùng</h3>
-                  <p>Lead</p>
-                </div>
-              </header>
-              <ul class="contact-links">
-                <li>
-                  Email:
-                  <a href="mailto:tmhung23@clc.fitus.edu.vn"
-                    >tmhung23@clc.fitus.edu.vn</a
-                  >
-                </li>
-                <li>
-                  GitHub:
-                  <a href="https://github.com/hungtmh" target="_blank"
-                    >hungtmh</a
-                  >
-                </li>
-              </ul>
-            </div>
-
-            <div class="contact-card">
-              <header class="contact-card-header">
-                <img
-                  src="assets/images/bui-duong-duy-cuong.png"
-                  alt="Bùi Dương Duy Cường"
-                  class="avatar-small"
-                />
-                <div>
-                  <h3>Bùi Dương Duy Cường</h3>
-                  <p>Thành viên</p>
-                </div>
-              </header>
-              <ul class="contact-links">
-                <li>
-                  Email:
-                  <a href="mailto:bddcuong23@clc.fitus.edu.vn"
-                    >bddcuong23@clc.fitus.edu.vn</a
-                  >
-                </li>
-                <li>
-                  GitHub:
-                  <a href="https://github.com/iamDicun" target="_blank"
-                    >iamDicun
-                  </a>
-                </li>
-              </ul>
-            </div>
-
-            <div class="contact-card">
-              <header class="contact-card-header">
-                <img
-                  src="assets/images/nguyen-anh-khoa.png"
-                  alt="Nguyễn Anh Khoa"
-                  class="avatar-small"
-                />
-                <div>
-                  <h3>Nguyễn Anh Khoa</h3>
-                  <p>Thành viên</p>
-                </div>
-              </header>
-              <ul class="contact-links">
-                <li>
-                  Email:
-                  <a href="mailto:nakhoa23@clc.fitus.edu.vn"
-                    >nakhoa23@clc.fitus.edu.vn</a
-                  >
-                </li>
-                <li>
-                  GitHub:
-                  <a href="https://github.com/wokovn" target="_blank">wokovn</a>
-                </li>
-              </ul>
-            </div>
-
-            <div class="contact-card">
-              <header class="contact-card-header">
-                <img
-                  src="assets/images/Thang.jpg"
-                  alt="Nguyễn Tấn Thắng"
-                  class="avatar-small"
-                />
-                <div>
-                  <h3>Nguyễn Tấn Thắng</h3>
-                  <p>Thành viên</p>
-                </div>
-              </header>
-              <ul class="contact-links">
-                <li>
-                  Email:
-                  <a href="mailto:ntthang23@clc.fitus.edu.vn"
-                    >ntthang23@clc.fitus.edu.vn</a
-                  >
-                </li>
-                <li>
-                  GitHub:
-                  <a href="https://github.com/thangak18" target="_blank"
-                    >thangak18</a
-                  >
-                </li>
-              </ul>
-            </div>
-
-            <div class="contact-card">
-              <header class="contact-card-header">
-                <img
-                  src="assets/images/ninh-van-khai.JPEG"
-                  alt="Ninh Văn Khải"
-                  class="avatar-small"
-                />
-                <div>
-                  <h3>Ninh Văn Khải</h3>
-                  <p>Thành viên</p>
-                </div>
-              </header>
-              <ul class="contact-links">
-                <li>
-                  Email:
-                  <a href="mailto:nvkhai23@clc.fitus.edu.vn"
-                    >nvkhai23@clc.fitus.edu.vn</a
-                  >
-                </li>
-                <li>
-                  GitHub:
-                  <a href="https://github.com/nvkhai238" target="_blank"
-                    >nvkhai238</a
-                  >
-                </li>
-              </ul>
-            </div>
-          </div>
-        </section>
-
-        <section id="contact" class="contact">
-          <h2>Thông tin chung</h2>
-          <div class="contact-info">
-            <div class="contact-item"><strong>Lớp:</strong> KTPM-01</div>
-            <div class="contact-item">
-              <strong>Trường:</strong> Đại học Khoa học Tự Nhiên
-            </div>
-          </div>
-        </section>
-      </section>
+      </div>
     </main>
 
-    <footer class="site-footer">
-      <div class="container">
-        <small>&copy; 2025 TayDuKy</small>
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-bottom">
+        <p class="footer-copyright">
+          © 2025 Tây Du Ký Team. All rights reserved.
+        </p>
       </div>
     </footer>
 
-    <script src="js/script.js"></script>
+    <script src="../js/script.js"></script>
   </body>
 </html>

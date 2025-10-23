@@ -1,87 +1,164 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="vi" class="scrollbar-custom">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Tây Du Ký - Về nhóm</title>
-    <link rel="stylesheet" href="/css/output.css" />
-    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="../css/output.css"/>
   </head>
-  <body>
-    <header class="site-header">
+  <body class="min-h-screen flex flex-col scrollbar-custom">
+    <!-- Header -->
+    <header class="header">
       <div class="container">
-        <a class="brand" href="index.html">
-          <img src="assets/images/logo.png" alt="Team Logo" />
-          <span>TÂY DU KÝ</span>
-        </a>
-        <nav class="nav" aria-label="Primary">
-          <button
-            id="menuToggle"
-            class="menu-toggle"
-            aria-expanded="false"
-            aria-controls="primaryMenu"
-          >
-            ☰
-          </button>
-          <ul id="primaryMenu" class="menu">
-            <li><a href="index.html">Trang chủ</a></li>
-            <li><a class="active" href="about.html">Về nhóm</a></li>
-            <li><a href="index.html#members">Thành viên</a></li>
-            <li><a href="contact.html">Liên hệ</a></li>
-          </ul>
-        </nav>
+        <div class="flex items-center justify-between py-4">
+          <a href="../index.html" class="flex items-center gap-3 group">
+            <div class="relative">
+              <img src="../assets/images/logo.png" alt="Team Logo" class="w-12 h-12 rounded-full border-2 border-primary-500 group-hover:border-primary-400 transition-all group-hover:scale-110" />
+              <div class="absolute -inset-1 bg-primary-500/20 rounded-full blur-md opacity-0 group-hover:opacity-100 transition-opacity"></div>
+            </div>
+            <div>
+              <span class="text-xl font-bold text-gradient block">TÂY DU KÝ</span>
+              <span class="text-xs text-surface-400">Web Dev Team</span>
+            </div>
+          </a>
+
+          <nav aria-label="Primary">
+            <button
+              id="menuToggle"
+              class="menu-toggle"
+              aria-expanded="false"
+              aria-controls="primaryMenu"
+            >
+              ☰
+            </button>
+
+            <ul id="primaryMenu" class="hidden md:flex gap-6 items-center">
+              <li><a href="../index.html" class="nav-link">Trang chủ</a></li>
+              <li><a href="about.html" class="nav-link">Về nhóm</a></li>
+              <li><a href="contact.html" class="nav-link">Liên hệ</a></li>
+            </ul>
+          </nav>
+        </div>
       </div>
     </header>
 
-    <main class="container layout">
-      <aside class="sidebar">
-        <h3>Thông tin chi tiết</h3>
-        <ul>
-          <li><a href="mission.html">Sứ mệnh</a></li>
-          <li><a href="vision.html">Tầm nhìn</a></li>
-          <li><a href="values.html">Giá trị cốt lõi</a></li>
-          <li><a href="index.html#members">Danh sách thành viên</a></li>
-        </ul>
-      </aside>
+    <!-- Main Content -->
+    <main class="flex-1">
+      <div class="container py-12">
+        <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
+          
+          <!-- Sidebar -->
+          <aside class="lg:col-span-1">
+            <div class="sidebar">
+              <h3 class="sidebar-title">📑 Thông tin chi tiết</h3>
+              <div class="space-y-2">
+                <a href="mission.html" class="block py-2 px-3 text-surface-300 hover:text-primary-400 hover:bg-surface-700 rounded transition-colors">
+                  → Sứ mệnh
+                </a>
+                <a href="vision.html" class="block py-2 px-3 text-surface-300 hover:text-primary-400 hover:bg-surface-700 rounded transition-colors">
+                  → Tầm nhìn
+                </a>
+                <a href="values.html" class="block py-2 px-3 text-surface-300 hover:text-primary-400 hover:bg-surface-700 rounded transition-colors">
+                  → Giá trị cốt lõi
+                </a>
+               
+              </div>
+            </div>
+          </aside>
 
-      <section class="content">
-        <h1>Về Tây Du Ký</h1>
-        <p>
-          Tây Du Ký là nhóm gồm 5 thành viên HCMUS. Chúng tôi chú trọng vào
-          thiết kế hiện đại, hiệu năng tốt, và trải nghiệm người dùng nhất quán
-          trên mọi thiết bị. Mục tiêu của Tây Du Ký là học tập thông qua dự án
-          thực tế, thực hành sau khi học lý thuyết trên lớp và hoàn thiện kỹ
-          năng teamwork.
-        </p>
+          <!-- Content -->
+          <section class="lg:col-span-3">
+            <!-- Hero -->
+            <div class="card-gradient mb-8">
+              <div class="card-body">
+                <span class="badge-primary badge-lg mb-3 inline-flex">📖 About Us</span>
+                <h1 class="text-4xl font-bold text-gradient mb-4">Về Tây Du Ký</h1>
+                <p class="text-lg text-surface-200">
+                  Tây Du Ký là nhóm gồm 5 thành viên HCMUS. Chúng tôi chú trọng vào
+                  thiết kế hiện đại, hiệu năng tốt, và trải nghiệm người dùng nhất quán
+                  trên mọi thiết bị. Mục tiêu của Tây Du Ký là học tập thông qua dự án
+                  thực tế, thực hành sau khi học lý thuyết trên lớp và hoàn thiện kỹ
+                  năng teamwork.
+                </p>
+              </div>
+            </div>
 
-        <h2 id="mission">Sứ mệnh</h2>
-        <p>
-          Tạo ra sản phẩm web chất lượng, và qua môn học các thành viên trong
-          nhóm sẽ có thêm kỹ năng cho nghề nghiệp tương lai.
-        </p>
+            <!-- Mission Section -->
+            <div class="card hover-lift mb-6">
+              <div class="card-header">
+                <h2 class="text-2xl font-bold text-primary-400 flex items-center gap-2">
+                  <span>🎯</span> Sứ mệnh
+                </h2>
+              </div>
+              <div class="card-body">
+                <p class="card-text">
+                  Tạo ra sản phẩm web chất lượng, và qua môn học các thành viên trong
+                  nhóm sẽ có thêm kỹ năng cho nghề nghiệp tương lai.
+                </p>
+              </div>
+            </div>
 
-        <h2 id="vision">Tầm nhìn</h2>
-        <p>
-          Sáng tạo và hoàn thành tốt project được giao trong quá trình học tập.
-        </p>
+            <!-- Vision Section -->
+            <div class="card hover-lift mb-6">
+              <div class="card-header">
+                <h2 class="text-2xl font-bold text-accent-400 flex items-center gap-2">
+                  <span>🚀</span> Tầm nhìn
+                </h2>
+              </div>
+              <div class="card-body">
+                <p class="card-text">
+                  Sáng tạo và hoàn thành tốt project được giao trong quá trình học tập.
+                </p>
+              </div>
+            </div>
 
-        <h2 id="values">Giá trị cốt lõi</h2>
-        <ul>
-          <li>Chất lượng</li>
-          <li>Sáng tạo</li>
-          <li>Hợp tác</li>
-          <li>Học hỏi</li>
-          <li>Trách nhiệm</li>
-        </ul>
-      </section>
+            <!-- Values Section -->
+            <div class="card hover-lift">
+              <div class="card-header">
+                <h2 class="text-2xl font-bold text-green-400 flex items-center gap-2">
+                  <span>💎</span> Giá trị cốt lõi
+                </h2>
+              </div>
+              <div class="card-body">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div class="flex items-center gap-3 p-3 bg-surface-700/50 rounded-lg">
+                    <span class="text-2xl">✓</span>
+                    <span class="font-semibold text-primary-400">Chất lượng</span>
+                  </div>
+                  <div class="flex items-center gap-3 p-3 bg-surface-700/50 rounded-lg">
+                    <span class="text-2xl">✓</span>
+                    <span class="font-semibold text-primary-400">Sáng tạo</span>
+                  </div>
+                  <div class="flex items-center gap-3 p-3 bg-surface-700/50 rounded-lg">
+                    <span class="text-2xl">✓</span>
+                    <span class="font-semibold text-primary-400">Hợp tác</span>
+                  </div>
+                  <div class="flex items-center gap-3 p-3 bg-surface-700/50 rounded-lg">
+                    <span class="text-2xl">✓</span>
+                    <span class="font-semibold text-primary-400">Học hỏi</span>
+                  </div>
+                  <div class="flex items-center gap-3 p-3 bg-surface-700/50 rounded-lg">
+                    <span class="text-2xl">✓</span>
+                    <span class="font-semibold text-primary-400">Trách nhiệm</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+        </div>
+      </div>
     </main>
 
-    <footer class="site-footer">
-      <div class="container">
-        <small>&copy; 2025 TayDuKy</small>
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-bottom">
+        <p class="footer-copyright">
+          © 2025 Tây Du Ký Team. All rights reserved.
+        </p>
       </div>
     </footer>
 
-    <script src="js/script.js"></script>
+    <script src="../js/script.js"></script>
   </body>
 </html>
