@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="vi" class="scrollbar-custom">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Tây Du Ký - Trang chủ | Web Development Team</title>
+    <meta name="description" content="Nhóm Tây Du Ký - Đội ngũ phát triển web chuyên nghiệp với 5 thành viên tài năng">
+    <link rel="stylesheet" href="css/output.css" />
+  </head>
+  <body class="min-h-screen flex flex-col scrollbar-custom">
+    
+    <!-- Header -->
+    <header class="header">
+      <div class="container">
+        <div class="flex items-center justify-between py-4">
+          <!-- Brand -->
+          <a href="index.html" class="flex items-center gap-3 group">
+            <div class="relative">
+              <img src="assets/images/logo.png" alt="Team Logo" class="w-12 h-12 rounded-full border-2 border-primary-500 group-hover:border-primary-400 transition-all group-hover:scale-110" />
+              <div class="absolute -inset-1 bg-primary-500/20 rounded-full blur-md opacity-0 group-hover:opacity-100 transition-opacity"></div>
+            </div>
+            <div>
+              <span class="text-xl font-bold text-gradient block">TÂY DU KÝ</span>
+              <span class="text-xs text-surface-400">Web Dev Team</span>
+            </div>
+          </a>
+
+          <!-- Navigation -->
+          <nav aria-label="Primary">
+            <!-- Mobile Menu Toggle -->
+            <button
+              id="menuToggle"
+              class="menu-toggle"
+              aria-expanded="false"
+              aria-controls="primaryMenu"
+            >
+              ☰
+            </button>
+
+            <!-- Menu -->
+            <ul id="primaryMenu" class="hidden md:flex gap-6 items-center">
+              <li><a href="index.html" class="nav-link nav-link--active">Trang chủ</a></li>
+              <li><a href="html/about.html" class="nav-link">Về nhóm</a></li>
+              <li><a href="html/mission.html" class="nav-link">Sứ mệnh</a></li>
+              <li><a href="#members" class="nav-link">Thành viên</a></li>
+              <li><a href="html/contact.html" class="nav-link">Liên hệ</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-1">
+      
+      <!-- Hero Section -->
+      <section class="hero-gradient mb-12">
+        <div class="hero-bg-pattern"></div>
+        <div class="hero-content">
+          <h1 class="hero-title fade-in">
+            Chào mừng đến với<br />Tây Du Ký Team
+          </h1>
+          <p class="hero-subtitle slide-up">
+            Đội ngũ phát triển web chuyên nghiệp với 5 thành viên tài năng
+          </p>
+        </div>
+      </section>
+
+      <!-- Main Content with Sidebar -->
+      <div class="container py-12">
+        <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
+          
+          <!-- Sidebar -->
+          <aside class="lg:col-span-1">
+            <div class="sidebar">
+              <h3 class="sidebar-title">📊 Thông tin nhóm</h3>
+              <div class="space-y-3">
+                <div class="sidebar-item">
+                  <span class="sidebar-label">Tên nhóm:</span>
+                  <span class="sidebar-value">Tây Du Ký</span>
+                </div>
+                <div class="sidebar-item">
+                  <span class="sidebar-label">Số thành viên:</span>
+                  <span class="sidebar-value">5 người</span>
+                </div>
+                <div class="sidebar-item">
+                  <span class="sidebar-label">Lĩnh vực:</span>
+                  <span class="sidebar-value">Web Dev</span>
+                </div>
+                <div class="sidebar-item">
+                  <span class="sidebar-label">Năm thành lập:</span>
+                  <span class="sidebar-value">2025</span>
+                </div>
+              </div>
+
+              <div class="divider"></div>
+
+              <div class="space-y-3">
+                <h4 class="text-sm font-bold text-primary-400 mb-3">🔗 Liên kết nhanh</h4>
+                <a href="html/about.html" class="block py-2 text-surface-300 hover:text-primary-400 transition-colors">
+                  → Về nhóm
+                </a>
+                <a href="html/mission.html" class="block py-2 text-surface-300 hover:text-primary-400 transition-colors">
+                  → Sứ mệnh
+                </a>
+                <a href="html/vision.html" class="block py-2 text-surface-300 hover:text-primary-400 transition-colors">
+                  → Tầm nhìn
+                </a>
+                <a href="html/contact.html" class="block py-2 text-surface-300 hover:text-primary-400 transition-colors">
+                  → Liên hệ
+                </a>
+              </div>
+
+              <div class="divider"></div>
+
+              <div class="space-y-3">
+                <h4 class="text-sm font-bold text-primary-400 mb-3">🏷️ Kỹ năng</h4>
+                <div class="flex flex-wrap gap-2">
+                  <span class="badge-primary">HTML</span>
+                  <span class="badge-primary">CSS</span>
+                  <span class="badge-accent">JavaScript</span>
+                  <span class="badge-success">React</span>
+                  <span class="badge-secondary">Tailwind</span>
+                </div>
+              </div>
+            </div>
+          </aside>
+
+          <!-- Members Section -->
+          <section class="lg:col-span-3">
+            <div class="mb-8">
+              <h2 class="text-3xl font-bold text-gradient mb-3">👥 Thành viên nhóm</h2>
+              <p class="text-surface-300">
+                Gặp gỡ những thành viên tài năng và nhiệt huyết của Tây Du Ký Team
+              </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <!-- Member Card 1 -->
+              <article class="card-hover hover-lift">
+                <div class="card-media">
+                  <img src="assets/images/Hung.jpg" alt="Trần Mạnh Hùng" class="w-full h-full object-cover" />
+                </div>
+                <div class="card-body">
+                  <div class="flex items-start justify-between mb-3">
+                    <div>
+                      <h3 class="card-title">Trần Mạnh Hùng</h3>
+                      <p class="card-subtitle">Team Leader</p>
+                    </div>
+                    <span class="badge-primary">Lead</span>
+                  </div>
+                  <p class="card-text text-sm mb-4">
+                    Lãnh đạo nhóm, phụ trách chiến lược và quản lý dự án.
+                  </p>
+                  <a href="members/tran-manh-hung.html" class="btn btn-primary w-full">
+                    Xem chi tiết →
+                  </a>
+                </div>
+              </article>
+
+              <!-- Member Card 2 -->
+              <article class="card-hover hover-lift">
+                <div class="card-media">
+                  <img src="assets/images/bui-duong-duy-cuong.png" alt="Bùi Dương Duy Cường" class="w-full h-full object-cover" />
+                </div>
+                <div class="card-body">
+                  <div class="flex items-start justify-between mb-3">
+                    <div>
+                      <h3 class="card-title">Bùi Dương Duy Cường</h3>
+                      <p class="card-subtitle">Frontend Developer</p>
+                    </div>
+                    <span class="badge-accent">Dev</span>
+                  </div>
+                  <p class="card-text text-sm mb-4">
+                    Chuyên gia frontend, đam mê UI/UX và công nghệ web.
+                  </p>
+                  <a href="members/bui-duong-duy-cuong.html" class="btn btn-primary w-full">
+                    Xem chi tiết →
+                  </a>
+                </div>
+              </article>
+
+              <!-- Member Card 3 -->
+              <article class="card-hover hover-lift">
+                <div class="card-media">
+                  <img src="assets/images/nguyen-anh-khoa.png" alt="Nguyễn Anh Khoa" class="w-full h-full object-cover" />
+                </div>
+                <div class="card-body">
+                  <div class="flex items-start justify-between mb-3">
+                    <div>
+                      <h3 class="card-title">Nguyễn Anh Khoa</h3>
+                      <p class="card-subtitle">Backend Developer</p>
+                    </div>
+                    <span class="badge-accent">Dev</span>
+                  </div>
+                  <p class="card-text text-sm mb-4">
+                    Phát triển backend, xử lý logic và cơ sở dữ liệu.
+                  </p>
+                  <a href="members/nguyen-anh-khoa.html" class="btn btn-primary w-full">
+                    Xem chi tiết →
+                  </a>
+                </div>
+              </article>
+
+              <!-- Member Card 4 -->
+              <article class="card-hover hover-lift">
+                <div class="card-media">
+                  <img src="assets/images/Thang.jpg" alt="Nguyễn Tấn Thắng" class="w-full h-full object-cover" />
+                </div>
+                <div class="card-body">
+                  <div class="flex items-start justify-between mb-3">
+                    <div>
+                      <h3 class="card-title">Nguyễn Tấn Thắng</h3>
+                      <p class="card-subtitle">UI/UX Designer</p>
+                    </div>
+                    <span class="badge-success">Design</span>
+                  </div>
+                  <p class="card-text text-sm mb-4">
+                    Thiết kế giao diện và trải nghiệm người dùng đẹp mắt.
+                  </p>
+                  <a href="members/nguyen-tan-thang.html" class="btn btn-primary w-full">
+                    Xem chi tiết →
+                  </a>
+                </div>
+              </article>
+
+              <!-- Member Card 5 -->
+              <article class="card-hover hover-lift">
+                <div class="card-media">
+                  <img src="assets/images/ninh-van-khai.JPEG" alt="Ninh Văn Khải" class="w-full h-full object-cover" />
+                </div>
+                <div class="card-body">
+                  <div class="flex items-start justify-between mb-3">
+                    <div>
+                      <h3 class="card-title">Ninh Văn Khải</h3>
+                      <p class="card-subtitle">Full Stack Developer</p>
+                    </div>
+                    <span class="badge-accent">Dev</span>
+                  </div>
+                  <p class="card-text text-sm mb-4">
+                    Phát triển full stack, frontend và backend.
+                  </p>
+                  <a href="members/ninh-van-khai.html" class="btn btn-primary w-full">
+                    Xem chi tiết →
+                  </a>
+                </div>
+              </article>
+            </div>
+          </section>
+
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-bottom">
+        <p class="footer-copyright">
+          © 2025 Tây Du Ký Team. All rights reserved.
+        </p>
+      </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
