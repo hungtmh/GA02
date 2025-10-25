@@ -1,17 +1,16 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="vi" class="scrollbar-custom">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Tây Du Ký - Nguyễn Anh Khoa</title>
+    <title>Nguyễn Anh Khoa</title>
     <link rel="stylesheet" href="../css/output.css" />
-    <link rel="stylesheet" href="../css/style.css" />
   </head>
-  <body>
+  <body class="min-h-screen flex flex-col scrollbar-custom">
+    <!-- Header -->
     <header class="header">
       <div class="container">
         <div class="flex items-center justify-between py-4">
-          <!-- Brand -->
           <a href="../index.html" class="flex items-center gap-3 group">
             <div class="relative">
               <img src="../assets/images/logo.png" alt="Team Logo" class="w-12 h-12 rounded-full border-2 border-primary-500 group-hover:border-primary-400 transition-all group-hover:scale-110" />
@@ -23,9 +22,7 @@
             </div>
           </a>
 
-          <!-- Navigation -->
           <nav aria-label="Primary">
-            <!-- Mobile Menu Toggle -->
             <button
               id="menuToggle"
               class="menu-toggle"
@@ -35,84 +32,182 @@
               ☰
             </button>
 
-            <!-- Menu -->
             <ul id="primaryMenu" class="hidden md:flex gap-6 items-center">
               <li></li>
               <li><a href="../index.html" class="nav-link">Trang chủ</a></li>
               <li><a href="../html/about.html" class="nav-link">Về nhóm</a></li>
-              <li><a href="../contact.html" class="nav-link">Liên hệ</a></li>
+              <li><a href="../html/contact.html" class="nav-link">Liên hệ</a></li>
             </ul>
           </nav>
         </div>
       </div>
     </header>
 
-    <main class="container flex flex-col md:flex-row gap-6 h-[90vh]">
-      <aside class="sidebar m-6 " style="position: static;">
-        <h3 class="font-bold mb-4">Thông tin</h3>
-        <div class="grid grid-1 gap-6 ml-4">
-          <div class="flex gap-6">
-            <span class="label font-bold">Vai trò</span>
-            <span class="value">Thành viên</span>
-          </div>
-          <div class="flex gap-6">
-            <span class="label font-bold">Kỹ năng</span>
-            <span class="value">HTML, CSS, JavaScript, React, ReactNative, ExpressJS, C++</span>
-          </div>
-        </div>
-      </aside>
-      <section class="flex-col my-6 leading-[1.6] gap-6">
-        <header class=" flex 
-           w-full overflow-hidden ">
-          <img
-            class=" border-[3px] h-[96px] w-[96px] rounded-full object-cover overflow-hidden border-primary-500 "
-            src="../assets/images/nguyen-anh-khoa.png"
-            alt="Nguyễn Anh Khoa"
-          />
-          <div class="flex-col ml-4 justify-center ">
-            <h1 class ="mb-5 text-4xl">Nguyễn Anh Khoa</h1>
-            <p class ="mb-5 mt-5">Thành viên</p>
-          </div>
-        </header>
-        <div class="flex-col gap-6" style="display: flex;">
-          <section>
-            <h2 class="my-6 text-4xl">Giới thiệu</h2>
-            <p class="mx-6">
-              Sinh viên CNTT khóa 2023 tại HCMUS, đam mê lập trình và công nghệ
-              thông tin. Thân thiện, hòa đồng và luôn sẵn sàng hỗ trợ đồng đội.
-            </p>
+    <!-- Main Content -->
+    <main class="flex-1">
+      <div class="container py-12">
+        <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
+          
+          <!-- Sidebar -->
+          <aside class="lg:col-span-1">
+            <div class="sidebar sticky top-4">
+              <h3 class="sidebar-title">Thông tin</h3>
+              <div class="space-y-4">
+                <div class="bg-surface-700/50 rounded-lg p-4">
+                  <p class="text-sm text-surface-400 mb-1">Vai trò</p>
+                  <p class="font-semibold text-primary-400">Developer</p>
+                </div>
+                <div class="bg-surface-700/50 rounded-lg p-4">
+                  <p class="text-sm text-surface-400 mb-1">Chuyên môn</p>
+                  <p class="font-semibold text-surface-200">Backend Development</p>
+                </div>
+                <div class="bg-surface-700/50 rounded-lg p-4">
+                  <p class="text-sm text-surface-400 mb-2">Tech Stack</p>
+                  <div class="flex flex-wrap gap-2">
+                    <span class="badge-primary badge-sm" style =" background-color: #E44D26;">HTML</span>
+                    <span class="badge-primary badge-sm" style =" background-color: #1572B6;">CSS</span>
+                    <span class="badge-primary badge-sm" style =" background-color: #b6a105;">JavaScript</span>
+                    <span class="badge-accent badge-sm" style =" background-color: #8CC84B;">Node.js</span>
+                    <span class="badge-accent badge-sm" style =" background-color: #61DAFB;">React</span>
+                    <span class="badge-accent badge-sm" style =" background-color: #61DAFB;">React Native</span>
+                    <span class="badge-accent badge-sm" style =" background-color: #F34B7D;">C++</span>
+                    <span class="badge-accent badge-sm" style =" background-color: #0f6b32;">Supabase</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </aside>
+
+          <!-- Content -->
+          <section class="lg:col-span-3 space-y-8">
+            
+            <!-- Profile Card -->
+            <div class="card-gradient">
+              <div class="card-body">
+                <div class="flex flex-col md:flex-row items-center md:items-start gap-6">
+                  <div class="relative group">
+                    <img
+                      class="w-32 h-32 rounded-full border-4 border-primary-500 object-cover"
+                      src="../assets/images/nguyen-anh-khoa.png"
+                      alt="Trần Mạnh Hùng"
+                    />
+                    <div class="absolute -inset-2 bg-primary-500/20 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                  </div>
+                  <div class="flex-1 text-center md:text-left">
+                    <h1 class="text-4xl font-bold text-white mb-2">Nguyễn Anh Khoa</h1>
+                    <span class="badge-primary badge-lg inline-flex mb-4">Member</span>
+                    <p class="text-surface-200 text-lg">
+                     
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Introduction Section -->
+            <div class="card hover-lift">
+              <div class="card-header">
+                <h2 class="text-2xl font-bold text-primary-400 flex items-center gap-2">
+                  <span></span> Giới thiệu
+                </h2>
+              </div>
+              <div class="card-body">
+                <p class="card-text mb-4">
+                  Sinh viên CNTT khóa 2023 tại HCMUS, đam mê lập trình và công nghệ thông tin. Thân thiện, hòa đồng và luôn sẵn sàng hỗ trợ đồng đội.
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-6">
+                  <div class="flex items-center gap-3 p-4 bg-surface-700/50 rounded-lg">
+                    <span class="text-3xl"></span>
+                    <div>
+                      <p class="text-sm text-surface-400">Vai trò</p>
+                      <p class="font-semibold text-primary-400">Developer</p>
+                    </div>
+                  </div>
+                  <div class="flex items-center gap-3 p-4 bg-surface-700/50 rounded-lg">
+                    <span class="text-3xl"></span>
+                    <div>
+                      <p class="text-sm text-surface-400">Kinh nghiệm</p>
+                      <p class="font-semibold text-primary-400">Backend Development</p>
+                    </div>
+                  </div>
+                  <div class="flex items-center gap-3 p-4 bg-surface-700/50 rounded-lg">
+                    <span class="text-3xl"></span>
+                    <div>
+                      <p class="text-sm text-surface-400">Trường</p>
+                      <p class="font-semibold text-primary-400">HCMUS</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Projects Section -->
+            <div class="card hover-lift">
+              <div class="card-header">
+                <h2 class="text-2xl font-bold text-accent-400 flex items-center gap-2">
+                  <span></span> Dự án tiêu biểu
+                </h2>
+              </div>
+              <div class="card-body">
+                <div class="space-y-4">
+                  <div class="p-5 bg-surface-700/50 rounded-lg hover:bg-surface-700 transition-colors border border-surface-600 hover:border-accent-500">
+                    <div class="flex items-start justify-between">
+                      <div>
+                        <h3 class="text-xl font-bold text-white mb-2">Web mở thẻ</h3>
+                        <p class="text-surface-300 mb-3">Sưu tầm những tấm thẻ bài vui nhộn</p>
+                        <div class="flex flex-wrap gap-2 mb-3">
+                          <span class="badge-secondary badge-sm">HTML</span>
+                          <span class="badge-secondary badge-sm">CSS</span>
+                          <span class="badge-secondary badge-sm">JavaScript</span>
+                        </div>
+                      </div>
+                      <span class="text-4xl"></span>
+                    </div>
+                    <a href="https://wokovn.github.io/card-web/" target="_blank" class="btn btn-accent btn-sm inline-flex items-center gap-2">
+                      <span>Xem chi tiết</span>
+                      <span>→</span>
+                    </a>
+                  </div>
+                  <div class="p-5 bg-surface-700/50 rounded-lg hover:bg-surface-700 transition-colors border border-surface-600 hover:border-accent-500">
+                    <div class="flex items-start justify-between">
+                      <div>
+                        <h3 class="text-xl font-bold text-white mb-2">FreeLand Platform</h3>
+                        <p class="text-surface-300 mb-3">Nền tảng kết nối freelancer và khách hàng</p>
+                        <div class="flex flex-wrap gap-2 mb-3">
+                          <span class="badge-secondary badge-sm">React</span>
+                          <span class="badge-secondary badge-sm">Node.js</span>
+                          <span class="badge-secondary badge-sm">Supabase</span>
+                        </div>
+                      </div>
+                      <span class="text-4xl"></span>
+                    </div>
+                    <a href="https://freeland-hcmus.vercel.app/" target="_blank" class="btn btn-accent btn-sm inline-flex items-center gap-2">
+                      <span>Xem chi tiết</span>
+                      <span>→</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Back Button -->
+            <div class="flex justify-center">
+              <a href="../index.html#members" class="btn btn-outline">
+                ← Quay lại danh sách thành viên
+              </a>
+            </div>
+
           </section>
 
-          <section>
-            <h2 class="my-6 text-4xl">Dự án tiêu biểu</h2>
-            <ul class="mx-6">
-              <li>
-                Web mở thẻ:
-                <a
-                  style="color: gray; text-decoration: none"
-                  href="https://wokovn.github.io/card-web/"
-                  target="_blank"
-                  >Xem chi tiết</a
-                >
-              </li>
-              <li>
-                Web dịch vụ tương tự Fiverr:
-                <a
-                  style="color: gray; text-decoration: none"
-                  href="https://freeland-hcmus.vercel.app/"
-                  target="_blank"
-                  >Xem chi tiết</a
-                >
-              </li>
-            </ul>
-          </section>
-        </section>
+        </div>
       </div>
     </main>
 
-    <footer class="bottom-0 left-0 right-0 flex justify-center h-fit bg-surface-800 py-4">
-      <div class="flex">
-      <small>&copy; 2025 Tây Du Ký</small>
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-bottom">
+        <p class="footer-copyright">
+          © 2025 Tây Du Ký Team. All rights reserved.
+        </p>
       </div>
     </footer>
 
